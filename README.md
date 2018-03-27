@@ -1,0 +1,3 @@
+# PartyInvites
+
+Проект PartyInvites
