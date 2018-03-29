@@ -1,0 +1,44 @@
+﻿@model PartyInvites.Models.GuestResponse
+@{
+    ViewData["Title"] = "RsvpForm";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div>
+        <form asp-action="RsvpForm" method="post">
+            <p>
+                <label asp-for="Name">Ваше имя:</label>
+                <input asp-for="Name" />
+            </p>
+
+            <p>
+                <label asp-for="Email">Ваш email:</label>
+                <input asp-for="Email" />
+            </p>
+
+            <p>
+                <label asp-for="Phone">Ваш телефон:</label>
+                <input asp-for="Phone" />
+            </p>
+
+            <p>
+                <label>Вы собираетесь посетить?</label>
+                <select asp-for="WillAttend">
+                    <option value="">Ваш выбор</option>
+                    <option value="true">Да, я буду</option>
+                    <option value="false">Нет, не приду</option>
+                </select>
+            </p>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</body>
+</html>
+

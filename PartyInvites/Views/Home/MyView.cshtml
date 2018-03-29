@@ -3,9 +3,18 @@
     ViewData["Title"] = "MyView";
 }
 
-<h2>MyView</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div>
+        @ViewBag.Greeting Просмотр представления.
 
-@ViewBag.Greeting Просмотр представления.
+        <p>Мы собираемся устроить вечеринку <br> (Что то лучше сделать: добавьте картинки или что то другое).</p>
 
-<p>Мы собираемся устроить вечеринку <br> (Что то лучше сделать: добавьте картинки или что то другое).</p>
-
+        <a asp-action="RsvpForm">Открыть Rsvp</a>
+    </div>
+</body>
+</html>
