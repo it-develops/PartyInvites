@@ -8,36 +8,41 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-    <div>
-        <form asp-action="RsvpForm" method="post">
-            <p>
-                <label asp-for="Name">Ваше имя:</label>
-                <input asp-for="Name" />
-            </p>
-
-            <p>
-                <label asp-for="Email">Ваш email:</label>
-                <input asp-for="Email" />
-            </p>
-
-            <p>
-                <label asp-for="Phone">Ваш телефон:</label>
-                <input asp-for="Phone" />
-            </p>
-
-            <p>
-                <label>Вы собираетесь посетить?</label>
-                <select asp-for="WillAttend">
-                    <option value="">Ваш выбор</option>
-                    <option value="true">Да, я буду</option>
-                    <option value="false">Нет, не приду</option>
-                </select>
-            </p>
-
-            <button type="submit">Отправить</button>
-        </form>
+    <div class="panel panel-success">
+        <div class="panel panel-heading text-center"><h4>RSVP</h4></div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="RsvpForm" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="Name">Ваше имя:</label>
+                    <input class="form-control" asp-for="Name" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email">Ваш email:</label>
+                    <input class="form-control" asp-for="Email" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone">Ваш телефон:</label>
+                    <input class="form-control" asp-for="Phone" />
+                </div>
+                <div class="form-group">
+                    <label>Вы собираетесь посетить?</label>
+                    <select class="form-control" asp-for="WillAttend">
+                        <option value="">Ваш выбор</option>
+                        <option value="true">Да, я буду</option>
+                        <option value="false">Нет, не приду</option>
+                    </select>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit">Отправить</button>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
