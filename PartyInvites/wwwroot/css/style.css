@@ -15,6 +15,7 @@
     font-weight: bold;
     color: #f00;
 }
+
 .validation-summary-valid {
     display: none;
 }

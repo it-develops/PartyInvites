@@ -15,21 +15,26 @@
 <body>
     <div class="panel panel-success">
         <div class="panel panel-heading text-center"><h4>RSVP</h4></div>
+        
         <div class="panel-body">
             <form class="p-a-1" asp-action="RsvpForm" method="post">
                 <div asp-validation-summary="All"></div>
+                
                 <div class="form-group">
                     <label asp-for="Name">Ваше имя:</label>
                     <input class="form-control" asp-for="Name" />
                 </div>
+                
                 <div class="form-group">
                     <label asp-for="Email">Ваш email:</label>
                     <input class="form-control" asp-for="Email" />
                 </div>
+                
                 <div class="form-group">
                     <label asp-for="Phone">Ваш телефон:</label>
                     <input class="form-control" asp-for="Phone" />
                 </div>
+                
                 <div class="form-group">
                     <label>Вы собираетесь посетить?</label>
                     <select class="form-control" asp-for="WillAttend">
@@ -38,6 +43,7 @@
                         <option value="false">Нет, не приду</option>
                     </select>
                 </div>
+                
                 <div class="text-center">
                     <button class="btn btn-primary" type="submit">Отправить</button>
                 </div>
